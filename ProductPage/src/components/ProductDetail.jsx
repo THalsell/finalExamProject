@@ -1,7 +1,9 @@
+import { useState, useEffect } from "react";
+
 const ProductDetail = () => {
     return (
         <div>
-            <h1>Product Detail</h1>
+            
         </div>
     );
 };
