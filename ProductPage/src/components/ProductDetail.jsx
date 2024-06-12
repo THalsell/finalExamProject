@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+// Importing useParams for accessing URL parameters and Link for navigation
 import { useParams, Link } from 'react-router-dom';
 
 
 const ProductDetail = () => {
     
   const [product, setProduct] = useState({});
+  // useParams hook to get the 'id' parameter from the URL
   const { id } = useParams();
 
     useEffect(() => {
@@ -20,10 +22,12 @@ const ProductDetail = () => {
           .catch((err) => {
             console.error(err);
           });
+          // The dependency array ensures this effect runs when the component mounts or 'id' changes
       }, [id]);
 
     return (
         <div>
+            {/* Link component for navigation back to the home page */}
               <Link to="/">
         <button>Back</button>
       </Link>
