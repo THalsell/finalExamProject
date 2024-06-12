@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 // Importing useParams for accessing URL parameters and Link for navigation
 import { useParams, Link } from 'react-router-dom';
+import { CardContent, Typography, Button } from '@mui/material';
+import { ProductDetailCard, ProductDetailContainer } from "./StyledComponents";
 
 
 const ProductDetail = () => {
@@ -26,23 +28,24 @@ const ProductDetail = () => {
       }, [id]);
 
     return (
-        <div>
+        <ProductDetailContainer>
             {/* Link component for navigation back to the home page */}
               <Link to="/">
-        <button>Back</button>
+        <Button>Back</Button>
       </Link>
-      <div>
-        <img src={product.image}
+      <ProductDetailCard>
+      <img src={product.image}
           alt={product.title}
+          height={200}
         />
-        <div>
-          <h4>{product.title}</h4>
-          <h5>${product.price}</h5>
-          <p>{product.description}</p>
+        <CardContent>
+        <Typography variant="h4">{product.title}</Typography>
+          <Typography variant="h5">${product.price}</Typography>
+          <Typography variant="body1">{product.description}</Typography>
           
-        </div>
-      </div>  
-        </div>
+        </CardContent>
+      </ProductDetailCard>  
+        </ProductDetailContainer>
     );
 };
 

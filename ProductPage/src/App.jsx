@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductDetail from './components/ProductDetail'
 import ProductList from './components/ProductList'
 
+
 function App() {
   return (
     // Setting up the router for handling navigation

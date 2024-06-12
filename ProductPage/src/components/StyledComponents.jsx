@@ -18,4 +18,20 @@ const Card = styled.div`
   width: 200px;
 `;
 
-export { ProductGrid, Card }
+const ProductDetailCard = styled.div`
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+`;
+
+const ProductDetailContainer = styled.div`
+     display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+`;
+
+export { ProductGrid, Card, ProductDetailCard, ProductDetailContainer }
