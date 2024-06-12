@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { ProductGrid, Card } from "./StyledComponents";
+import { Link } from 'react-router-dom';
+
 
 
 const ProductList = () => {
@@ -20,11 +22,16 @@ const ProductList = () => {
           });
       }, []);
 
+      const handleCardClick = (id) => {
+        window.location.href = `/product/${id}`;
+      };
+
     return (
         <ProductGrid>
-           {products.map((item) => {
+           {products.map((item, index) => {
+            
             return (
-                <Card key={item.id}>
+                <Card key={index} onClick={() => handleCardClick(item.id)}>
                     <img src={item.image} height="140" width="120" />
                     <h3>{item.title}</h3>
                     <p>Rating: {item.rating.rate}</p>
@@ -32,6 +39,7 @@ const ProductList = () => {
                     
                 </Card>
             )
+            
            })}
         </ProductGrid>
     );
