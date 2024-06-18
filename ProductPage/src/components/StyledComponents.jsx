@@ -34,4 +34,23 @@ const ProductDetailContainer = styled.div`
   text-align: center;
 `;
 
-export { ProductGrid, Card, ProductDetailCard, ProductDetailContainer }
+const HeaderContainer = styled.div`
+  background-color: white; 
+  color: black;
+  padding: 16px;
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+`;
+
+const FooterContainer = styled.footer`
+  background-color: white;
+  color: #333;
+  padding: 16px;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  width: 100%;
+`;
+
+export { ProductGrid, Card, ProductDetailCard, ProductDetailContainer, HeaderContainer, FooterContainer }

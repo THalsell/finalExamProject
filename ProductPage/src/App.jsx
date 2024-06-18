@@ -2,12 +2,17 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductDetail from './components/ProductDetail'
 import ProductList from './components/ProductList'
+import NavBar from "./components/NavBar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 function App() {
   return (
     // Setting up the router for handling navigation
     <Router>
+      <Header />
+      <NavBar />
       {/* Defining the routes for the application */}
       <Routes>
          {/* Route for the product list page, rendered at the root URL path */}
@@ -21,6 +26,7 @@ function App() {
           element={<ProductDetail />} // The ProductDetail component is rendered for URLs matching /product/:id
         />
       </Routes>
+      <Footer />
     </Router>
   );
 }
