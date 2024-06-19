@@ -20,17 +20,18 @@ const Card = styled.div`
 
 const ProductDetailCard = styled.div`
   max-width: 400px;
+  max-height: 200vh;
   margin: 20px auto;
   padding: 20px;
   text-align: center;
 `;
 
 const ProductDetailContainer = styled.div`
-     display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 150vh;
   text-align: center;
 `;
 
@@ -48,7 +49,7 @@ const FooterContainer = styled.footer`
   color: #333;
   padding: 16px;
   text-align: center;
-  position: static;
+  position: relative;
   bottom: 0;
   width: 100%;
 `;
